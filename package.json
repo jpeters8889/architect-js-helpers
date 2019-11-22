@@ -1,0 +1,17 @@
+{
+  "name": "architect-js-helpers",
+  "version": "0.0.1",
+  "description": "Architect JS Helpers",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && webpack"
+  },
+  "devDependencies": {
+    "webpack": "^2.3.3",
+    "webpack-merge": "^4.2.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7.0"
+  },
+  "author": "Jamie Peters",
+  "license": "MIT"
+}
