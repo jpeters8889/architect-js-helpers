@@ -1,13 +1,25 @@
 export default {
-    props: ['name', 'value', 'metas'],
+    props: {
+        name: String,
+        value: String,
+        metas: Array | Object,
+        listener: {
+            type: String,
+            default: 'prepare-form-data',
+        },
+        emitter: {
+            type: String,
+            default: 'form-field-change',
+        }
+    },
 
     mounted() {
-        if(this.value !== undefined) {
+        if (this.value !== undefined) {
             this.actualValue = this.value;
         }
 
-        window.Architect.$on('prepare-form-data', () => {
-            window.Architect.$emit('form-field-change', this.getFormData());
+        window.Architect.$on(this.listener, () => {
+            window.Architect.$emit(this.emitter, this.getFormData());
         });
     },
 
