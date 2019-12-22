@@ -1,7 +1,7 @@
 export default {
     props: {
         name: String,
-        value: String,
+        value: String | Array | Object,
         metas: Array | Object,
         listener: {
             type: String,

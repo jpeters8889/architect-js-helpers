@@ -84,7 +84,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* harmony default export */ __webpack_exports__["a"] = ({
     props: {
         name: String,
-        value: String,
+        value: String | Array | Object,
         metas: Array | Object,
         listener: {
             type: String,
