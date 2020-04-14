@@ -86,6 +86,7 @@ return /******/ (function(modules) { // webpackBootstrap
         name: String,
         value: String | Array | Object,
         metas: Array | Object,
+        id: Number,
         listener: {
             type: String,
             default: 'prepare-form-data'
