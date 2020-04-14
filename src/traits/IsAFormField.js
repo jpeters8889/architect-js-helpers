@@ -3,6 +3,7 @@ export default {
         name: String,
         value: String | Array | Object,
         metas: Array | Object,
+        id: Number,
         listener: {
             type: String,
             default: 'prepare-form-data',
