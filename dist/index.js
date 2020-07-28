@@ -123,13 +123,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
         dispatchEvents() {
             if (this.emitterValue) {
-                window.Architect.$emit(this.name + '-changed', this.emitterValue);
+                Architect.$emit(this.name + '-changed', this.emitterValue);
             }
         },
 
         bootstrapListeners() {
-            window.Architect.$on(this.listener, () => {
-                window.Architect.$emit(this.emitter, this.getFormData());
+            Architect.$on(this.listener, () => {
+                Architect.$emit(this.emitter, this.getFormData());
             });
 
             /**
@@ -145,7 +145,7 @@ return /******/ (function(modules) { // webpackBootstrap
                 let column = this.metas.listeners[event];
 
                 if (typeof column === 'string') {
-                    window.Architect.$on(column + '-' + event, value => {
+                    Architect.$on(column + '-' + event, value => {
                         Architect.request().post('/listener', {
                             blueprint: this.$route.params.blueprint,
                             event: column + '-' + event,
