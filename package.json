@@ -1,6 +1,6 @@
 {
   "name": "architect-js-helpers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Architect JS Helpers",
   "main": "dist/index.js",
   "scripts": {

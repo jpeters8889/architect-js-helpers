@@ -87,6 +87,10 @@ return /******/ (function(modules) { // webpackBootstrap
         value: String | Array | Object,
         metas: Array | Object,
         id: Number,
+        index: {
+            type: Number,
+            default: 0
+        },
         listener: {
             type: String,
             default: 'prepare-form-data'
@@ -116,6 +120,7 @@ return /******/ (function(modules) { // webpackBootstrap
     methods: {
         getFormData() {
             return {
+                index: this.index,
                 name: this.name,
                 value: this.actualValue
             };
@@ -131,15 +136,6 @@ return /******/ (function(modules) { // webpackBootstrap
             Architect.$on(this.listener, () => {
                 Architect.$emit(this.emitter, this.getFormData());
             });
-
-            /**
-             * listeners [
-             *      changed: [
-             *          column1
-             *          column2
-             *      ]
-             *  ]
-             */
 
             Object.keys(this.metas.listeners).forEach(event => {
                 let column = this.metas.listeners[event];
