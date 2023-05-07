@@ -7,7 +7,7 @@
     "build": "rm -rf dist && webpack"
   },
   "devDependencies": {
-    "webpack": "^2.3.3",
+    "webpack": "^5.82.0",
     "webpack-merge": "^4.2.2",
     "babel-core": "^6.26.3",
     "babel-loader": "7.0"
